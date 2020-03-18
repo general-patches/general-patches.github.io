@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+        <link rel="stylesheet" href="css/index.css">
+        <title>Covid-19 data</title>
+        <meta charset="UTF-8">
+	</head>
+	<body>
+        <div class="header">
+            Covid-19 data
+        </div>
+        <div class="body_container" id="body_container">
+            <div class="body" id="body">
+                <div class="body_head">
+                    Input the code for the country to be analysed below.
+                    <br>
+                    A list of country codes are available <a href="https://thevirustracker.com/api#indexpage">here.</a>
+                </div>
+                <input id="countryCode" type="text" onkeydown="changeCountry(event)" placeholder="eg. ZA for South Africa">
+            </div>
+            <div id="icon" style="height: 0px;width: 50px;border-radius: 50%;background-color: #e3e3e3;border: 0px solid black;border-top-color: white;margin: 0 auto;"></div>
+        </div> 
+        <footer>
+            All data obtained from 
+            <a href="https://https://thevirustracker.com">
+                thevirustracker
+            </a>
+        </footer>
+        <script src="js/index.js"></script>
+	</body>
+</html>
