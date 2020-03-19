@@ -120,7 +120,6 @@ function drawBarGraph(canvasID){
     ctx.lineTo(canvasWidth-canvasPadding,canvasPadding);
     ctx.stroke();
     ctx.restore();
-    console.log("test");
 }
 
 function removeElement(elementId) {
