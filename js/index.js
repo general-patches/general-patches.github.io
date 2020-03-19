@@ -112,7 +112,7 @@ function drawBarGraph(canvasID){
     }
     ctx.stroke();
     ctx.save();
-    ctx.font = "20px sans-serif";
+    ctx.font = "20px Arial";
     ctx.fillText("Time",canvasWidth/2,canvasHeight-canvasPadding/2.5);
     ctx.fillText(maxY,canvasPadding/2,canvasPadding+8);
     ctx.lineWidth = 1;
