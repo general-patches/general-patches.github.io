@@ -36,20 +36,18 @@ function changeCountry(event){
     }
 }
 var deg = 0;
-var iconLoad;
+var iconLoad = setInterval(rotate,10);
 
 async function load(bool){
     loadbool = bool;
     var icon = document.getElementById("icon");
     if(bool == true){
-        iconLoad = setInterval(rotate,10);
         icon.style.border = "10px solid black";
         icon.style.height = "50px";
         icon.style.borderTopColor = "white";
     }else{
         icon.style.border = "0px solid black";
         icon.style.height = "0px";
-        clearInterval(iconLoad);
     }
 }
 
