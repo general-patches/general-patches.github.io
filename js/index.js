@@ -2,6 +2,7 @@ var data = null;
 const canvasWidth = 1000;
 const canvasHeight = 700;
 const canvasPadding = 50;
+var loadbool = false;
 
 /*
 ctx.save();
@@ -18,17 +19,19 @@ ctx.save();
 
 
 function changeCountry(event){
-    if(event.keyCode == 13){
-        load(true);
-        if(document.getElementById("countryCode").value != ""){
-            if(document.getElementById("canvas_container0") != null){
-                removeElement("canvas_container0");
-                removeElement("container_heading0");
+    if(loadbool != true){
+        if(event.keyCode == 13){
+            load(true);
+            if(document.getElementById("countryCode").value != ""){
+                if(document.getElementById("canvas_container0") != null){
+                    removeElement("canvas_container0");
+                    removeElement("container_heading0");
+                }
+                update(document.getElementById("countryCode").value);
+                document.getElementById("countryCode").value = "";
+            }else{
+                alert("Please Enter a country code")
             }
-            update(document.getElementById("countryCode").value);
-            document.getElementById("countryCode").value = "";
-        }else{
-            alert("Please Enter a country code")
         }
     }
 }
@@ -36,6 +39,7 @@ var deg = 0;
 var iconLoad;
 
 async function load(bool){
+    loadbool = bool;
     var icon = document.getElementById("icon");
     if(bool == true){
         iconLoad = setInterval(rotate,10);
