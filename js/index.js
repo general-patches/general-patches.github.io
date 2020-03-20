@@ -94,9 +94,10 @@ function drawBarGraph(canvasID){
     var ctx = c.getContext("2d");
     var maxY = 0;
 
-    for(var i = 0; i < (Object.keys(data).length-2); i++){
+    for(var i = 0; i < (Object.keys(data).length-1); i++){
         x_values.push(i);
         y_values.push(data[Object.keys(data)[i]]["total_cases"]);
+        console.log(y_values[i]);
         if(y_values[i] > maxY){
             maxY = y_values[i];
         }
@@ -108,7 +109,7 @@ function drawBarGraph(canvasID){
     ctx.save();
     ctx.moveTo(canvasPadding, canvasHeight-canvasPadding);
     ctx.lineWidth = 3;
-    for(var i = 0; i < (Object.keys(data).length-2); i++){
+    for(var i = 0; i < (Object.keys(data).length-1); i++){
         y_values[i] = y_values[i]*y_adjust;
         x_values[i] = x_values[i]*x_adjust;
         ctx.lineTo(x_values[i]+canvasPadding,(canvasHeight-y_values[i])-canvasPadding);
