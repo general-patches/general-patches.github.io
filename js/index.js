@@ -58,7 +58,7 @@ function rotate(){
 }
 
 async function update(countryCode = "ZA"){
-    var url = "https://thevirustracker.com/free-api?countryTimeline=" + countryCode;
+    var url = "https://cors-anywhere.herokuapp.com/https://thevirustracker.com/free-api?countryTimeline=" + countryCode;
     let promise = new Promise(function(resolve, reject){
         getData(url,resolve);
     });
