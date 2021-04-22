@@ -1,32 +1,49 @@
 <!DOCTYPE html>
-
 <html>
-	<head>
-        <link rel="stylesheet" href="css/index.css">
-        <title>Covid-19 data</title>
-        <meta charset="UTF-8">
-	</head>
-	<body>
-        <div class="header">
-            Covid-19 data
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="Fox.png">
+        <script src="index.js" defer></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <title>FoxTyping</title>
+    </head>
+    <body>
+        <div id="header">
+            <span id="image">
+                <img src="Fox.png" alt="Fox" width="70">
+            </span>
+            <span>FoxTyping</span>
         </div>
-        <div class="body_container" id="body_container">
-            <div class="body" id="body">
-                <div class="body_head">
-                    Input the code for the country to be analysed below.
-                    <br>
-                    A list of country codes are available <a href="https://thevirustracker.com/api#indexpage">here.</a>
-                </div>
-                <input id="countryCode" type="text" onkeydown="changeCountry(event)" placeholder="eg. ZA for South Africa">
-            </div>
-            <div id="icon" style="height: 0px;width: 50px;border-radius: 50%;background-color: #e3e3e3;border: 0px solid black;border-top-color: white;margin: 0 auto;"></div>
-        </div> 
-        <footer>
-            All data obtained from 
-            <a href="https://https://thevirustracker.com">
-                thevirustracker
-            </a>
-        </footer>
-        <script src="js/index.js"></script>
-	</body>
+        <div id="prompt" class="divIn">
+            a
+        </div>
+        <div class="divIn">
+            <input type="text" id="in" name="Type here">
+        </div>
+        <div id="optionsLabel">
+            Options
+        </div>
+        <div id="options">
+            <label class="container">Capitals
+                <input type="checkbox" id="capitals">
+                <span class="checkmark"></span>
+            </label>
+            
+            <label class="container">Numbers
+                <input type="checkbox" id="numbers">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Symbols
+                <input type="checkbox" id="symbols">
+                <span class="checkmark"></span>
+            </label>
+            
+            <label class="container">Uncommon Symbols
+                <input type="checkbox" id="uncommonSymbols">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </body>
 </html>
